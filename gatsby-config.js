@@ -8,9 +8,9 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
-        typeName: "",
-        fieldName: "",
-        url: "",
+        typeName: "recipedata",
+        fieldName: "recipedata",
+        url: "https://api-us-east-1.graphcms.com/v2/ckux14eyt076l01xsgwr42dur/master",
       },
     }
   ],
