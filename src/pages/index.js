@@ -1,6 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import { Header } from '../components/Header'
+import { Main } from '../components/Main'
+
+import '../global/global.css'
+
 export const query = graphql`
 query {
   recipedata {
@@ -66,10 +71,23 @@ export default function Index({ data }) {
   console.log("to aqui", data)
 
   const dataHeaders = data.recipedata.headers[0]
+  const dataMain = data.recipedata.mains[0]
 
   return (
     <div>
-      <img src={dataHeaders.logo.url} alt="" />
+      <Header
+        background={dataHeaders.background.url}
+        logo={dataHeaders.logo.url}
+        btnabout={dataHeaders.about}
+        btnrcp={dataHeaders.recipes}
+        btnsub={dataHeaders.subscribe}
+        title={dataHeaders.title}
+      />
+      <Main
+        latesttitle={dataMain.latesttitle}
+        imgcake={dataMain.imgcake.url}
+        cakeparagraph={dataMain.cakeparagraph}
+       />
     </div>
   )
 }
