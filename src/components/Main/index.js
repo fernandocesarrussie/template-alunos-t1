@@ -18,17 +18,17 @@ export function Main({
 }) {
     return (
         <S.Container>
-            <div>
-                <h2>{latesttitle}</h2>
-            </div>
-            <div>
-                <figure>
+            <S.BoxTitle>
+                <S.Title>{latesttitle}</S.Title>
+            </S.BoxTitle>
+            <S.ContainerCard>
+                <S.BoxImage>
                     <img src={imgcake} alt="" />
-                </figure>
-                <div>
-                    <p>{cakeparagraph}</p>
-                </div>
-            </div>
+                </S.BoxImage>
+                <S.BoxParagraph>
+                    <S.Paragraph>{cakeparagraph}</S.Paragraph>
+                </S.BoxParagraph>
+            </S.ContainerCard>
         </S.Container>
     )
 }
