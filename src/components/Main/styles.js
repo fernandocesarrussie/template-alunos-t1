@@ -8,12 +8,12 @@ export const BoxTitle = styled.div`
   justify-content: center;
 `
 export const Title = styled.h2`
-  font-size: 40px;
+  font-size: 99px;
   text-transform: uppercase;
 `
 
 export const ContainerCard = styled.section`
-  border: solid 1px red;
+  border: solid 10px blue;
   width: 536px;
   height: 780px;
 `

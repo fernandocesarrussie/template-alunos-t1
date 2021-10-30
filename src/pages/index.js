@@ -68,7 +68,7 @@ query {
 
 export default function Index({ data }) {
 
-  console.log("to aqui", data)
+  
 
   const dataHeaders = data.recipedata.headers[0]
   const dataMain = data.recipedata.mains[0]
