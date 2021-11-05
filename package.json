@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.2",
+    "express": "^4.17.1",
     "gatsby": "^3.13.1",
     "gatsby-plugin-styled-components": "^4.14.0",
     "gatsby-source-graphql": "^3.14.0",

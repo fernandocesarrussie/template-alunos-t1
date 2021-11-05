@@ -1,48 +1,54 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const Container = styled.div`
-    background-image: url(${props => props.back});
-    background-position-y: -23rem;
-    background-size: cover;
-    background-repeat: no-repeat;
+export const ContainerHeader = styled.div`
+    position: fixed;
+    top: 0;
+    z-index: 99;
     width: 100%;
-    height: 100vh;
-`
-
-export const Wrapper = styled.div`
+    height: 5rem;
+    background-color: #fffffff7;
+    backdrop-filter: blur(5px);
+    box-shadow: #0000001a 0 4px 8px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 20px;
 `
 
-export const BoxBtn = styled.div`
-    width: 400px;
-    display: flex;
-    justify-content: space-evenly;
+export const ImageLogo = styled.img`
+    width: 150px;
 `
-
-export const Btn = styled.button`
+export const BtnsInfo = styled.button`
+    font: 500 1.125rem / Soleto, sans-serif;
+    color: rgb(34, 37, 75);
+    text-align: center;
     background: transparent;
     border: 0;
-    font-size: 20px;
-    text-transform: uppercase;
     cursor: pointer;
-
-    &:hover {
-        border: solid 2px;
+    margin-right: 2.5rem;
+    &:nth-child(3) {
+        position: relative;
+        width: 11.25rem;
+        height: 3rem;
+        margin-left: 2.5rem;
+        padding: 0px;
+        border: none;
+        border-radius: 4px;
+        background: rgb(255, 206, 6);
+        overflow: hidden;
+        outline: none;
+        font: 500 1.125rem / 3rem Soleto, sans-serif;
+        color: rgb(34, 37, 75);
+        text-align: center;
+    }
+    &:nth-child(4) {
+        background: 0;
+        border: solid 1px;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        font-size: 10px;
     }
 `
+export const BtnEnter = styled.button`
 
-export const BoxTitle = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 40vh;
-`
-
-export const Title = styled.h1`
-    font-size: 8rem;
-    font-weight: 500;
-    text-transform: uppercase;
 `

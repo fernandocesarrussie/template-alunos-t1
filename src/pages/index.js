@@ -1,93 +1,85 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from "react";
+import {graphql} from 'gatsby';
 
-import { Header } from '../components/Header'
-import { Main } from '../components/Main'
-
+import {Header} from '../components/Header'
+import {Main} from '../components/Main'
 import '../global/global.css'
 
 export const query = graphql`
 query {
-  recipedata {
-    headers {
-      background {
+  alldata {
+    projects {
+      btnblog
+      btnfaq
+      btnheader
+      btnlang
+      btnstart
+      divparagraph
+      divtitle
+      image {
         url
       }
-      logo {
+      imagea {
         url
       }
       title
-      subscribe
-      recipes
-      about
-    }
-    mains {
-      abouttitle
-      imgcake {
+      subtitle
+      imagegif {
         url
       }
-      imgpizza {
+      imageb {
         url
       }
-      latesttitle
-      lorem
-      imgshake {
+      paragraphgif
+      paragraphgrid
+      paragraphmain
+      titlegif
+      titlegrid
+      titlemain
+      imagetitulos {
         url
       }
-      pizzaparagraph
-      shakeparagraph
-      cakeparagraph
-      spoon {
-        url
-      }
-      signup
-      submit
-      subscribe
-    }
-    footers {
-      about
-      recipes
-      subscribe
-			instagram {
-				url
-      }
-      twitter {
-				url
-      }
-      facebook {
-				url
-      }
-      pinterest {
-				url
-      }
+      itemlist
+      itemlist2
+      itemlist3
     }
   }
 }
-
 `
 
-export default function Index({ data }) {
+export default function Index({data}) {
 
-  
-
-  const dataHeaders = data.recipedata.headers[0]
-  const dataMain = data.recipedata.mains[0]
+  const dataMain = data.alldata.projects[0]
 
   return (
     <div>
-      <Header
-        background={dataHeaders.background.url}
-        logo={dataHeaders.logo.url}
-        btnabout={dataHeaders.about}
-        btnrcp={dataHeaders.recipes}
-        btnsub={dataHeaders.subscribe}
-        title={dataHeaders.title}
+      {console.log(data)}
+      <Header 
+          blog={dataMain.btnblog}
+          faq={dataMain.btnfaq}
+          enter={dataMain.btnheader}
+          Lang={dataMain.btnlang}
+          image={dataMain.imagea.url}
       />
-      <Main
-        latesttitle={dataMain.latesttitle}
-        imgcake={dataMain.imgcake.url}
-        cakeparagraph={dataMain.cakeparagraph}
-       />
+      <Main 
+          title={dataMain.title}
+          subtitle={dataMain.subtitle}
+          start={dataMain.btnstart}
+          image={dataMain.image.url}
+          titleb={dataMain.divtitle}
+          paragraph={dataMain.divparagraph}
+          imageb={dataMain.imagegif.url}
+          titlec={dataMain.titlegif}
+          paragraphb={dataMain.paragraphgif}
+          imagec={dataMain.imageb.url}
+          titled={dataMain.titlemain}
+          paragraphd={dataMain.paragraphmain}
+          titlee={dataMain.titlegrid}
+          paragraphe={dataMain.paragraphgrid}
+          listitem={dataMain.itemlist}
+          listitemb={dataMain.itemlist2}
+          listitemc={dataMain.itemlist3}
+      />
     </div>
   )
 }
